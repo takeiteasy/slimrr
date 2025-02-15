@@ -51,7 +51,6 @@ conversions.
     dot = Quaternion() | Quaternion.from_x_rotation(np.pi / 2.0)
 """
 
-from __future__ import absolute_import
 import numpy as np
 from multipledispatch import dispatch
 from .base import BaseObject, BaseQuaternion, BaseMatrix, BaseVector, NpProxy

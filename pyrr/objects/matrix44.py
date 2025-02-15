@@ -56,7 +56,6 @@ conversions.
     # first column
     c1 = m.c1
 """
-from __future__ import absolute_import
 from numbers import Number
 import numpy as np
 from multipledispatch import dispatch

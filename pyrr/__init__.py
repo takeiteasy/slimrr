@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import
 
 # the version of software
 # this is used by the setup.py script
@@ -23,6 +22,7 @@ __all__ = [
     'trig',
     'utils',
     'vector',
+    'vector2',
     'vector3',
     'vector4',
     'Matrix33',
@@ -50,6 +50,7 @@ from . import (
     trig,
     utils,
     vector,
+    vector2,
     vector3,
     vector4,
 )
@@ -58,6 +59,7 @@ from .objects import (
     Matrix33,
     Matrix44,
     Quaternion,
+    Vector2,
     Vector3,
     Vector4
 )
@@ -67,6 +69,7 @@ from .objects import (
 setattr(matrix33, 'Matrix33', Matrix33)
 setattr(matrix44, 'Matrix44', Matrix44)
 setattr(quaternion, 'Quaternion', Quaternion)
+setattr(vector2, 'Vector2', Vector2)
 setattr(vector3, 'Vector3', Vector3)
 setattr(vector4, 'Vector4', Vector4)
 

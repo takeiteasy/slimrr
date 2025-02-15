@@ -2,7 +2,6 @@
 """Defines a number of functions to test interactions between
 various forms data types.
 """
-from __future__ import absolute_import, division, print_function
 import math
 import numpy as np
 from . import rectangle, vector, vector3, plane
