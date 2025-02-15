@@ -145,6 +145,9 @@ class BaseMatrix33(BaseMatrix):
 class BaseMatrix44(BaseMatrix):
     pass
 
+class BaseVector2(BaseVector):
+    pass
+
 class BaseVector3(BaseVector):
     pass
 
