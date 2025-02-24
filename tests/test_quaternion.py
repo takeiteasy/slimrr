@@ -6,16 +6,16 @@ try:
 except:
     import unittest
 import numpy as np
-from pyrr import quaternion
+from slimrr import quaternion
 
 
 class test_quaternion(unittest.TestCase):
     # many of these values are taken from searches on wolfram alpha
 
     def test_import(self):
-        import pyrr
-        pyrr.quaternion
-        from pyrr import quaternion
+        import slimrr
+        slimrr.quaternion
+        from slimrr import quaternion
 
     def test_create(self):
         result = quaternion.create()

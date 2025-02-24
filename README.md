@@ -2,6 +2,9 @@
 
 This is a fork of the [pyrr](https://github.com/adamlwgriffiths/pyrr) library, with some features added, and some removed. Just the essentials.
 
+> [!NOTE]
+> `pip install slimrr==0.1.0`
+
 ## Features
 
 - Object Oriented and Procedural interfaces

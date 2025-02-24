@@ -14,7 +14,7 @@ with open('slimrr/version.py', 'r') as f:
 setup(
     name='slimrr',
     version=__version__,
-    description='3D mathematical functions using NumPy',
+    description='2D+3D math functions using NumPy',
     license='BSD',
     author='George Watson',
     url='https://github.com/takeiteasy/slimrr',

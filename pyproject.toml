@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=72.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slimrr"
+version = "0.1.0"
+authors = [
+  { name="George Watson", email="gigolo@hotmail.co.uk" },
+]
+description = "2D+3D math functions using NumPy"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "multipledispatch"
+]
+classifiers = [
+    "Natural Language :: English",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: Python",
+    "License :: OSI Approved :: BSD License",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+license = { text = "BSD" }
+
+[project.urls]
+Homepage = "https://github.com/takeiteasy/slimrr"
+Issues = "https://github.com/takeiteasy/slimrr/issues"
