@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import numpy as np
-from pyrr import vector, vector2, vector3
+from slimrr import vector, vector2, vector3
 
 class NpProxy(object):
     def __init__(self, index):

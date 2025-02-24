@@ -8,20 +8,20 @@ except ImportError:
 # get our version but don't import it
 # or we'll need our dependencies already installed
 # https://github.com/todddeluca/happybase/commit/63573cdaefe3a2b98ece87e19d9ceb18f00bc0d9
-with open('pyrr/version.py', 'r') as f:
+with open('slimrr/version.py', 'r') as f:
     exec(f.read())
 
 setup(
-    name='pyrr',
+    name='slimrr',
     version=__version__,
     description='3D mathematical functions using NumPy',
     license='BSD',
-    author='Adam Griffiths',
-    url='https://github.com/adamlwgriffiths/Pyrr',
+    author='George Watson',
+    url='https://github.com/takeiteasy/slimrr',
     install_requires=['numpy', 'multipledispatch'],
     platforms=['any'],
     test_suite='tests',
-    packages=['pyrr', 'pyrr.objects'],
+    packages=['slimrr', 'slimrr.objects'],
     classifiers=[
         'Natural Language :: English',
         'Intended Audience :: Developers',

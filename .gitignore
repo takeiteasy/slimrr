@@ -12,5 +12,5 @@ env/
 dist/
 *.egg-info/
 **/*.egg-info/
-.eggs/
+*.eggs/
 .vscode/
