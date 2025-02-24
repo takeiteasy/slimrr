@@ -126,6 +126,13 @@ def generate_vertex_normals(vertices, index, normalize_result=True):
         vertex_normals = normalize(vertex_normals)
     return vertex_normals
 
+def perpendicular(v):
+    """Returns a vector perpendicular to the input vector.
+    """
+    return np.cross(v,
+                    np.array([1., 0., 0.]) if abs(v[0]) >= abs(v[1]) and abs(v[0]) >= abs(v[2]) else 
+                    np.array([0., 1., 0.]) if abs(v[1]) >= abs(v[0]) and abs(v[1]) >= abs(v[2]) else 
+                    np.array([0., 0., 1.]))
 
 class index:
     #: The index of the X value within the vector

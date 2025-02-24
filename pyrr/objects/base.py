@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import numpy as np
-from pyrr import vector, vector3
+from pyrr import vector, vector2, vector3
 
 class NpProxy(object):
     def __init__(self, index):
@@ -122,18 +122,46 @@ class BaseVector(BaseObject):
     @length.setter
     def length(self, length):
         self[:] = vector.set_length(self, length)
+    
+    def distance(self, other):        
+        return vector.distance(self, other)
+
+    def distance_squared(self, other):
+        return vector.distance_squared(self, other)
 
     def dot(self, other):
         return vector.dot(self, type(self)(other))
 
     def cross(self, other):
-        return type(self)(vector3.cross(self[:3], other[:3]))
+        if self.shape == (3,):
+            return type(self)(vector3.cross(self[:3], other[:3]))
+        else:
+            return type(self)(vector2.cross(self, other))
 
     def interpolate(self, other, delta):
         return type(self)(vector.interpolate(self, type(self)(other), delta))
 
     def normal(self, v2, v3, normalize_result=True):
         return type(self)(vector3.generate_normals(self, type(self)(v2), type(self)(v3), normalize_result))
+    
+    def min(self, other):
+        return vector.min(self, other)
+
+    def max(self, other):
+        return vector.max(self, other)
+
+    def lerp(self, other, delta):
+        return vector.lerp(self, other, delta)
+    
+    def move_towards(self, target, max_distance):
+        return vector.move_towards(self, target, max_distance)
+
+    def clamp(self, min, max):
+        return vector.clamp(self, min, max)
+
+    def angle(self, other):
+        return vector.angle(self, other)
+
 
 class BaseQuaternion(BaseObject):
     pass

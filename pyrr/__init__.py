@@ -5,20 +5,11 @@
 from .version import __version__
 
 __all__ = [
-    'aabb',
-    'aambb',
     'euler',
-    'geometric_tests',
-    'geometry',
     'integer',
-    'line',
     'matrix33',
     'matrix44',
-    'plane',
     'quaternion',
-    'ray',
-    'rectangle',
-    'sphere',
     'trig',
     'utils',
     'vector',
@@ -33,20 +24,11 @@ __all__ = [
 ]
 
 from . import (
-    aabb,
-    aambb,
     euler,
-    geometric_tests,
-    geometry,
     integer,
-    line,
     matrix33,
     matrix44,
-    plane,
     quaternion,
-    ray,
-    rectangle,
-    sphere,
     trig,
     utils,
     vector,

@@ -32,7 +32,17 @@ def create_from_vector4(vector, dtype=None):
     dtype = dtype or vector.dtype
     return np.array([vector[0], vector[1]], dtype=dtype), vector[2], vector[3]
 
-# TODO: Pad out the vector2 type
+def cross(v1, v2):
+    """Calculates the cross-product of two vectors.
+    """
+    return v1[0] * v2[1] - v1[1] * v2[0]
+
+def refract(v, n, eta):
+    """Calculates the refraction of a vector.
+    """
+    d = np.sum(v * n)
+    k = 1.0 - eta ** 2 * (1.0 - d ** 2)
+    return eta * v - (eta * d + np.sqrt(k)) * n if k >= 0.0 else np.zeros(2)
 
 class index:
     #: The index of the X value within the vector

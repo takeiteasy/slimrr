@@ -67,6 +67,12 @@ class Vector3(BaseVector3):
     ########################
     # Creation
     @classmethod
+    def from_vector2(cls, vector, z=0.0, dtype=None):
+        """Create a Vector3 from a Vector2.
+        """
+        return cls(vector.x, vector.y, z, dtype)
+
+    @classmethod
     def from_vector4(cls, vector, dtype=None):
         """Create a Vector3 from a Vector4.
 
@@ -194,7 +200,12 @@ class Vector3(BaseVector3):
         """Returns the opposite of this vector.
         """
         return Vector3(-self)
-
+    
+    def perpendicular(self):
+        """Returns a vector perpendicular to the input vector.
+        """
+        return Vector3(vector3.perpendicular(self))
+    
     @property
     def vector3(self):
         return self

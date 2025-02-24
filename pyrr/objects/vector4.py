@@ -80,6 +80,12 @@ class Vector4(BaseVector4):
     ########################
     # Creation
     @classmethod
+    def from_vector2(cls, vector, z=0.0, w=0.0, dtype=None):
+        """Create a Vector4 from a Vector2.
+        """
+        return cls(vector.x, vector.y, z, w, dtype)
+
+    @classmethod
     def from_vector3(cls, vector, w=0.0, dtype=None):
         """Create a Vector4 from a Vector3.
 

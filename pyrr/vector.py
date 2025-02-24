@@ -194,3 +194,32 @@ def interpolate(v1, v2, delta):
     t1 = 1.0
     delta_t = t1 - t0
     return (t1 - t) / delta_t * v1 + (t - t0) / delta_t * v2
+
+def distance(v1, v2):
+    return np.sqrt(np.sum((v1 - v2) ** 2))
+
+def distance_squared(v1, v2):
+    return np.sum((v1 - v2) ** 2)
+
+def min(v1, v2):
+    return np.minimum(v1, v2)
+
+def max(v1, v2):
+    return np.maximum(v1, v2)
+
+def lerp(v1, v2, delta):
+    return v1 + delta * (v2 - v1)
+
+def move_towards(v, target, max_distance):
+    d = target - v
+    l = np.sum(d ** 2)
+    if (l == 0 or max_distance >= 0) and l <= max_distance ** 2:
+        return target
+    return v + d / np.sqrt(l) * max_distance
+
+def clamp(v, min, max):
+    return np.minimum(np.maximum(v, min), max)
+
+def angle(v1, v2):
+    return np.arccos(np.sum(v1 * v2, axis=-1) / (np.sqrt(np.sum(v1 ** 2, axis=-1)) * np.sqrt(np.sum(v2 ** 2, axis=-1))))
+
