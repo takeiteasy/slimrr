@@ -7,7 +7,7 @@ except:
 
 class test_oo_examples(unittest.TestCase):
     def test_oo_examples(self):
-        from pyrr import Quaternion, Matrix44, Vector3
+        from slimrr import Quaternion, Matrix44, Vector3
         import numpy as np
 
         point = Vector3([1.,2.,3.])
@@ -39,7 +39,7 @@ class test_oo_examples(unittest.TestCase):
         point = matrix * point
 
     def test_conversions(self):
-        from pyrr import Quaternion, Matrix33, Matrix44, Vector3, Vector4
+        from slimrr import Quaternion, Matrix33, Matrix44, Vector3, Vector4
 
         v3 = Vector3([1.,0.,0.])
         v4 = Vector4.from_vector3(v3, w=1.0)
@@ -58,7 +58,7 @@ class test_oo_examples(unittest.TestCase):
         m44 = Quaternion().matrix44
 
     def test_operators(self):
-        from pyrr import Quaternion, Matrix44, Matrix33, Vector3, Vector4
+        from slimrr import Quaternion, Matrix44, Matrix33, Vector3, Vector4
         import numpy as np
 
         # matrix multiplication
