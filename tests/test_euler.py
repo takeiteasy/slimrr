@@ -3,14 +3,14 @@ try:
 except:
     import unittest
 import numpy as np
-from pyrr import euler
+from slimrr import euler
 
 
 class test_euler(unittest.TestCase):
     def test_import(self):
-        import pyrr
-        pyrr.euler
-        from pyrr import euler
+        import slimrr
+        slimrr.euler
+        from slimrr import euler
 
     def test_create(self):
         self.assertTrue(np.array_equal(euler.create(), [0., 0., 0.]))

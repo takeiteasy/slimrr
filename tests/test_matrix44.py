@@ -3,14 +3,14 @@ try:
 except:
     import unittest
 import numpy as np
-from pyrr import matrix44, quaternion, vector3
+from slimrr import matrix44, quaternion, vector3
 
 
 class test_matrix44(unittest.TestCase):
     def test_import(self):
-        import pyrr
-        pyrr.matrix44
-        from pyrr import matrix44
+        import slimrr
+        slimrr.matrix44
+        from slimrr import matrix44
 
     def test_create_identity(self):
         result = matrix44.create_identity()

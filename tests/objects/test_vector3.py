@@ -4,12 +4,12 @@ try:
 except:
     import unittest
 import numpy as np
-from pyrr.objects.matrix33 import Matrix33
-from pyrr.objects.matrix44 import Matrix44
-from pyrr.objects.quaternion import Quaternion
-from pyrr.objects.vector3 import Vector3
-from pyrr.objects.vector4 import Vector4
-from pyrr import vector3
+from slimrr.objects.matrix33 import Matrix33
+from slimrr.objects.matrix44 import Matrix44
+from slimrr.objects.quaternion import Quaternion
+from slimrr.objects.vector3 import Vector3
+from slimrr.objects.vector4 import Vector4
+from slimrr import vector3
 
 
 class test_object_vector3(unittest.TestCase):
@@ -17,21 +17,21 @@ class test_object_vector3(unittest.TestCase):
     _size = np.multiply.reduce(_shape)
 
     def test_imports(self):
-        import pyrr
-        pyrr.Vector3()
-        pyrr.vector3.Vector3()
-        pyrr.objects.vector3.Vector3()
+        import slimrr
+        slimrr.Vector3()
+        slimrr.vector3.Vector3()
+        slimrr.objects.vector3.Vector3()
 
     def test_imports_1(self):
-        from pyrr import Vector3
+        from slimrr import Vector3
         Vector3
 
     def test_imports_2(self):
-        from pyrr.objects import Vector3
+        from slimrr.objects import Vector3
         Vector3
 
     def test_imports_3(self):
-        from pyrr.objects.vector3 import Vector3
+        from slimrr.objects.vector3 import Vector3
         Vector3
 
     def test_create(self):

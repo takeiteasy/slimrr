@@ -7,7 +7,7 @@ except:
 
 class test_procedural_examples(unittest.TestCase):
     def test_procedural_examples(self):
-        from pyrr import quaternion, matrix44, vector3
+        from slimrr import quaternion, matrix44, vector3
         import numpy as np
 
         point = vector3.create(1.,2.,3.)

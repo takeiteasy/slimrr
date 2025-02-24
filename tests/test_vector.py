@@ -3,14 +3,14 @@ try:
 except:
     import unittest
 import numpy as np
-from pyrr import vector, vector3, vector4
+from slimrr import vector, vector3, vector4
 
 
 class test_vector(unittest.TestCase):
     def test_import(self):
-        import pyrr
-        pyrr.vector
-        from pyrr import vector
+        import slimrr
+        slimrr.vector
+        from slimrr import vector
 
     def test_normalize_single_vector(self):
         result = vector3.normalize([1.,1.,1.])
