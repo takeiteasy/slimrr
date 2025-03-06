@@ -19,6 +19,7 @@ __all__ = [
     'Matrix33',
     'Matrix44',
     'Quaternion',
+    'Vector2',
     'Vector3',
     'Vector4',
 ]
